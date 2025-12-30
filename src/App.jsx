@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar.jsx";
+import Hero from "./components/Hero.jsx";
 
 const App = () => {
     return (
@@ -6,6 +7,7 @@ const App = () => {
 
        <main>
            <NavBar />
+           <Hero/>
        </main>
     )
 }
