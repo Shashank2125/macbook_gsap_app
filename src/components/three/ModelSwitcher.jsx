@@ -1,10 +1,10 @@
 //14 and 16 ->PresentationControl
-import React, {useRef} from 'react'
+import  {useRef} from 'react'
 import {PresentationControls} from "@react-three/drei";
 import MacbookModel14 from "../models/Macbook-14.jsx";
 import MacbookModel16 from "../models/Macbook-16.jsx";
-import gsap from"gsap";
-import {useGSAP} from"@gsap/react"
+import gsap from "gsap";
+import {useGSAP} from "@gsap/react"
 
 const ANIMATION_DURATION=1;
 const OFFSET_DISTANCE=5;
@@ -53,7 +53,6 @@ const ModelSwitcher = ({scale,isMobile}) => {
         snap:true,
         speed:1,
         zoom:1,
-        polar:[-Math.PI,Math.PI],
         azimuth:[-Infinity,Infinity],
         config:{mass:1,tension:0, friction:26}
 
