@@ -14,6 +14,13 @@ import useMacbookStore from "../../store/index.js";
 import {noChangeParts} from "../../constants/index.js";
 import * as THREE from "three";
 
+/**
+ * Render a GLTF MacBook model whose body parts are recolored at runtime and whose screen is driven by a video texture.
+ *
+ * Traverses the loaded scene and sets each mesh's material color to the store-provided color except for parts listed in `noChangeParts`, and maps a video texture onto the screen mesh.
+ *
+ * @returns {JSX.Element} A React Three Fiber <group> containing the macbook meshes with runtime-applied color and screen texture.
+ */
 export default function MacbookModel(props) {
     const {color,texture} =useMacbookStore()
   const { nodes, materials,scene } = useGLTF('/models/macbook-transformed.glb')
